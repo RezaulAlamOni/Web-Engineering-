@@ -41,8 +41,8 @@
             else
             {
                 echo "<h3>Info Add Successfully</h3><br><br>
-                <a-prime class='btn btn-success' href='show.php?view=1'>Show Info</a-prime>
-                <a-prime class='btn btn-info' href='index.php'>Home</a-prime>";
+                <a-HTML-prime class='btn btn-success' href='show.php?view=1'>Show Info</a-HTML-prime>
+                <a-HTML-prime class='btn btn-info' href='index.php'>Home</a-HTML-prime>";
 
             }
 

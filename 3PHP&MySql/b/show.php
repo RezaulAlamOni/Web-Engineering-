@@ -69,9 +69,6 @@
         </table>
         <a class="btn btn-success col-md-6" href="index.php">Add Employee</a>
 
-
-
-
     </div>
 </body>
 </html>

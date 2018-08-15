@@ -1,0 +1,14 @@
+body{
+	font-family: arial;
+}
+.all {
+	padding: 5% 30%;
+}
+.top {
+	text-align: center;
+}
+
+tr:hover{
+	background: black;
+	color: white;
+}

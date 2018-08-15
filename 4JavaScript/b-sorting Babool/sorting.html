@@ -35,13 +35,15 @@
     </style>
 </head>
 <body>
+<center>
+
 <div id="mainSection"></div>
 <div id="result" class="hidden"></div>
 <input type="button" value="submit" id="submit">
+
+
+</center>
 </body>
-
-
-
 <script>
 
     let createInputField = function(id) {
@@ -62,7 +64,7 @@
         mainSection.appendChild(inputSection);
         inputSection.appendChild(label);
         inputSection.appendChild(input);
-    }
+    };
 
     let getNumbers = function() {
         let numbers = [];
@@ -82,12 +84,13 @@
             }
         }
         return numbers;
-    }
+    };
 
     window.onload = function() {
         let students = prompt("Please enter the total number of students");
         let submit = document.getElementById('submit');
         let result = document.getElementById('result');
+
         students = Number(students);
         for(let i = 0; i < students; i++) {
             createInputField(i);
