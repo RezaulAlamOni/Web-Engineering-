@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sort</title>
+</head>
+<body>
+
+<button onclick="myFunction()">Start</button>
+
+<h3 id="student"></h3>
+<h3 id="marks"></h3>
+<h3 id="result"></h3>
+
+<script>
+function myFunction() 
+{
+    var n = parseInt(prompt("Please enter student number"));
+    document.getElementById("student").innerHTML = "Number of students = " + n;
+
+    var i = 1, marks = [];
+    while (i <= n) 
+    {
+    	marks.push(parseInt(prompt("Enter the marks of student number " + i)));
+    	i++;
+    }
+
+    document.getElementById("marks").innerHTML = "Student's marks are = " + marks;
+
+    for (i = 0 ; i < n - 1; i++)
+	{
+		for (j = 0 ; j < n - i - 1; j++)
+		{
+			if (marks[j] > marks[j+1]) /* For decreasing order use < */
+			{
+				swap       = marks[j];
+			    marks[j]   = marks[j+1];
+			    marks[j+1] = swap;
+	    	}
+	  	}
+	}
+
+
+    document.getElementById("result").innerHTML = "Sorted marks are = " + marks;
+}
+</script>
+
+</body>
+</html>

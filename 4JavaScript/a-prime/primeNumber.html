@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prime</title>
+</head>
+<body>
+<script>
+    let primeList = function(input) {
+        let sqrtInput = Math.ceil(Math.sqrt(5));
+        let primes = Array(input+1).fill(1);
+        [ primes[0], primes[1] ] = [0, 0];
+        for(let i = 2; i <= sqrtInput; i++) {
+            if(primes[i] == 1) {
+                for(let j = 2; i*j <= input; j++) {
+                    primes[i*j] = 0;
+                }
+            }
+        }
+        return primes;
+    };
+
+    window.onload = function() {
+        let input = prompt('Please insert the number to check prime');
+        input = Number(input);
+        primeList(input)[input] == 1 ? alert(input +" is a Prime number") : alert(input +" isn't a Prime number");
+    }
+
+</script>
+</body>
+</html>
